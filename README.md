@@ -4,7 +4,7 @@ A wrapper for Google's Firebase Realtime Database library. It uses Kotlin to cre
 # Usage
 RxFirebase has 3 functions:
 * `observe(T.class)` returns `Observable<T>`
-* `observeListOf(T.class)` returns `Observalbe<List<T>>`
+* `observeListOf(T.class)` returns `Observable<List<T>>`
 * `observeChildrenOf(T.class)` return `Observable<T>`
 
 All these functions create an observable with Firebase Event listeners that gets removed when the subscriber unsubscribes. Both `observe` and `observeListOf` use Firebase's `ValueEventListener`, thus, every change made to a query is caught in `onNext` function of the subscriber. On the other hand, `observeChildrenOf`, uses Firebase's `ChildEventListener`, thus, every change made to the children of the query is caught in `onNext` function of the subscriber.
